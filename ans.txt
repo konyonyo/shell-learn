@@ -1,0 +1,5 @@
+https://b.ueda.tech/?post=20171202_shellgei_32
+[Q1]
+echo 3457 | sed 's/./&\n/g' | awk '{a[$1]=$1}END{for(i=1;i<=9;i++)print a[i]}'
+[Q2]
+echo 14679 | sed 's/./&\n/g' | awk 'BEGIN{j=0}{a[$1]=$1}END{for(i=1;i<=9;i++){if(a[i]==""){printf "%c\n", j+97; j++}else{ print a[i] }}}'
